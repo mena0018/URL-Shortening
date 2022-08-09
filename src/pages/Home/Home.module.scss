@@ -2,8 +2,19 @@
 @import "../../scss/variables.scss";
 
 
+.global_container {
+   width: 100%;
+   height: 100%;
+   max-width: $max-width;
+   margin: 0 auto;
+   overflow-x: hidden;
+}
+
 .home_container {
-   padding: 7em 1em;
+   padding: 8em 1em 0;
+   display: grid;
+   grid-template-columns: 1fr;
+   place-items: center;
    
    .bloc_img {
       padding: 0 40px 40px;
@@ -37,14 +48,14 @@
    }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 700px) {
    .home_container {
       padding: 3em 1em;
 
       .bloc_img {
          img {
             width: 120%;
-            padding-left: 5em;
+            padding-left: 3em;
          }
       }
    }
@@ -52,27 +63,30 @@
 
 
 @media screen and (min-width: 1024px) {
-    
-   .home_container {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      place-items: center;
-
-      .bloc_img {
-         order: 2;
-
-         img {
-            width: 125%
+   .global_container {
+      height: 80%;
+      
+      .home_container {
+         display: grid;
+         grid-template-columns: repeat(2, 1fr);
+         place-items: center;
+         
+         .bloc_img {
+            order: 2;
+            
+            img {
+               width: 135%
+            }
          }
-      }
-
-      .home_content {
-         text-align: initial;
-
-         p {
-            padding: 1em 0;
-            font-size: 22px;
-            width: 80%;
+         
+         .home_content {
+            text-align: initial;
+            
+            p {
+               padding: 1em 0;
+               font-size: 22px;
+               width: 80%;
+            }
          }
       }
    }

@@ -1,0 +1,9 @@
+@import "../../scss/_mixins.scss";
+@import "../../scss/variables.scss";
+
+
+.services_container {
+  width: 100vw;
+  height: 50%;
+  background-color: $light-gray;
+}
