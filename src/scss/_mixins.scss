@@ -20,3 +20,25 @@
    left: 50%;
    transform: translate(-50%, -50%);
 }
+
+
+@mixin call_to_action {
+  font-family: $font-fam;
+  margin: 0 20px;
+  color: $light-gray;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  letter-spacing: 1.2;
+  padding: 7px 20px;
+  border-radius: 30px;
+  background-color: $cyan;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: filter ease 0.1s;
+
+  &:hover {
+    filter: opacity(50%);
+  }
+}

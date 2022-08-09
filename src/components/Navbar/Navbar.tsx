@@ -21,13 +21,13 @@ export default function Navbar() {
 
          <ul className={isActive ? cx(styles.links, styles.active)  : styles.links}>
             <li className={styles.nav_item}>
-               <a href="/">Features</a>
+               <a href="#features">Features</a>
             </li>
             <li className={styles.nav_item}>
-               <a href="/"> Pricing</a>
+               <a href="#pricing"> Pricing</a>
             </li> 
             <li className={styles.nav_item}>
-               <a href="/">Ressources</a>
+               <a href="#ressources">Ressources</a>
             </li>
          </ul>
 
@@ -35,7 +35,7 @@ export default function Navbar() {
 
          <div className={isActive ? cx(styles.sign, styles.active) : styles.sign}>
             <button className={styles.login_btn}>Login</button>
-            <button className={styles.signup_btn}>Sign Up</button>
+            <button className={styles.call_to_action}>Sign Up</button>
          </div>
          
       </div>
