@@ -12,7 +12,7 @@ export default function Home() {
       <div className={styles.home_content}>
          <h1>More than just shorter links</h1>
          <p>Build your brand’s recognition and get detailed insights on how your links are performing.</p>
-         <button className={styles.call_to_action}></button>
+         <button>Get Started</button>
       </div>
     </div>
   )
