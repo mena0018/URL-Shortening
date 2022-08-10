@@ -4,6 +4,104 @@
 
 .services_container {
   width: 100%;
-  height: 50%;
+  height: 100%;
   background-color: $light-gray;
+}
+
+.services_header {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  position: relative;
+  top: -8%;
+  width: 85%;
+  background-color: $dark-violet;
+  background-image: url("../../images/bg-shorten-desktop.svg");
+  background-image: no-repeat;
+  margin: 0 auto;
+  padding: 1.5em;
+  border-radius: 8px;
+
+  input {
+    padding: 0.7em;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: $dark-violet;
+    font-family: $font-fam;
+
+    &::placeholder {
+      font-size: 16px;
+      padding-left: 0.5em;
+    }
+  }
+
+  button {
+    @include call_to_action;
+    width: 100%;
+    margin: 0;
+    border-radius: 8px;
+    padding: 0.55em 1.2em;
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .services_header {
+    flex-direction: row;
+    width: 80%;
+    top: -10%;
+    max-width: calc($max-width - 15em);
+    padding: 2.5em;
+    
+    input {
+      width: 100%;
+      padding: 1.5em;
+
+      &::placeholder {
+        font-size: 20px;
+      }
+    }
+
+    button {
+      width: 30%;
+      padding: 0.7em 1.5em;
+      font-size: 20px;
+    }
+  }
+}
+
+
+.services_informations {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 2em;
+
+  h3 {
+    font-size: 30px;
+    font-weight: bold;
+    color: $dark-violet;
+    padding-bottom: 1em;
+  }
+
+  p {
+    font-size: 18px;
+    color: $grayish-violet;
+    letter-spacing: 0.3px;
+    max-width: calc($max-width - 25em);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .services_informations {
+    padding: 4em 2em;
+
+    p {
+      width: 40%;
+      margin: 0 auto;
+      font-size: 22px;
+    }
+  }
 }
