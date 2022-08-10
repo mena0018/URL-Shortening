@@ -1,15 +1,15 @@
-import Home from "./pages/Home/Home";
 import "./index.scss";
+import Home from "./pages/Home/Home";
 import Services from './pages/Services/Services';
 
 
 function App() {
 
   return (
-    <div className="App-container">
+    <>
       <Home />
       <Services />
-    </div>
+    </>
   );
 }
 
