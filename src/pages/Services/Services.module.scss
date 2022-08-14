@@ -3,22 +3,22 @@
 
 
 .services_container {
+  position: relative;
   width: 100%;
-  height: 100%;
+  height: auto;
   background-color: $light-gray;
 }
 
 .services_header {
+   position: absolute;
+   top: -4%;
+   left: 7%;
   display: flex;
   flex-direction: column;
-  gap: 1em;
-  position: relative;
-  top: -8%;
   width: 85%;
+  gap: 1em;
   background-color: $dark-violet;
   background-image: url("../../images/bg-shorten-desktop.svg");
-  background-image: no-repeat;
-  margin: 0 auto;
   padding: 1.5em;
   border-radius: 8px;
 
@@ -51,33 +51,36 @@
   .services_header {
     flex-direction: row;
     width: 80%;
-    top: -10%;
+    top: -4%;
+    left: 18%;
     max-width: calc($max-width - 15em);
-    padding: 2.5em;
+    padding: 2em;
     
     input {
       width: 100%;
-      padding: 1.5em;
+      padding: 1em;
 
       &::placeholder {
-        font-size: 20px;
+        font-size: 18px;
       }
     }
 
     button {
       width: 30%;
-      padding: 0.7em 1.5em;
-      font-size: 20px;
+      padding: 0.7em 1em;
+      font-size: 18px;
     }
   }
 }
+
+
 
 
 .services_informations {
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 0 2em;
+  padding: 10em 2em 2em;
 
   h3 {
     font-size: 30px;
@@ -96,7 +99,8 @@
 
 @media screen and (min-width: 1024px) {
   .services_informations {
-    padding: 4em 2em;
+    padding: 12em 2em 2em;
+
 
     p {
       width: 40%;
@@ -104,4 +108,12 @@
       font-size: 22px;
     }
   }
+}
+
+
+.services_list {
+   width: 90%;
+   margin: 5em auto 0;
+   flex-direction: column;
+   @include align-flex(center);
 }

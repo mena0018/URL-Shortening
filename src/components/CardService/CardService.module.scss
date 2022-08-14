@@ -1,0 +1,45 @@
+@import "../../scss/_mixins.scss";
+@import "../../scss/variables.scss";
+
+
+.card_container {
+   position: relative;
+   @include align-flex(center);
+   flex-direction: column;
+   width: 90%;
+   gap: 1em;
+   background-color: $white;
+   margin: 2em 0 6em;
+   padding: 3em 2em;
+   border-radius: 5px;
+
+   
+   &:not(:last-child):after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      width: 0.8em;
+      height: 10em;
+      background: $cyan;
+   }
+
+   .card_header {
+      position: absolute;
+      top: -15%;
+      width: 90px;
+      height: 90px;
+      background-color: $dark-violet;
+      border-radius: 50%;
+      @include align-flex(center);
+   }
+
+   h2 {
+      color: $dark-violet;
+      padding-top: 1.5em;
+   }
+
+   p {
+      color: $grayish-violet;
+      text-align: center;
+   }
+}
