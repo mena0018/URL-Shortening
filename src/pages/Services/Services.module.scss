@@ -7,12 +7,17 @@
   width: 100%;
   height: auto;
   background-color: $light-gray;
+
+  .services_content {
+   max-width: $max-width;
+   margin: 0 auto;
+  }
 }
 
 .services_header {
-   position: absolute;
-   top: -4%;
-   left: 7%;
+  position: absolute;
+  top: -4%;
+  left: 7%;
   display: flex;
   flex-direction: column;
   width: 85%;
@@ -51,11 +56,9 @@
   .services_header {
     flex-direction: row;
     width: 80%;
-    top: -4%;
-    left: 18%;
     max-width: calc($max-width - 15em);
     padding: 2em;
-    
+
     input {
       width: 100%;
       padding: 1em;
@@ -72,7 +75,6 @@
     }
   }
 }
-
 
 
 
@@ -101,7 +103,6 @@
   .services_informations {
     padding: 12em 2em 2em;
 
-
     p {
       width: 40%;
       margin: 0 auto;
@@ -112,8 +113,16 @@
 
 
 .services_list {
-   width: 90%;
-   margin: 5em auto 0;
-   flex-direction: column;
-   @include align-flex(center);
+  width: 90%;
+  margin: 5em auto 0;
+  flex-direction: column;
+  @include align-flex(center);
+}
+
+
+@media screen and (min-width: 1024) {
+   .services_list {
+      width: 90%;
+      flex-direction: row;
+   }
 }

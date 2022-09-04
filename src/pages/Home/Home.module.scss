@@ -2,27 +2,32 @@
 @import "../../scss/variables.scss";
 
 
-.global_container {
-   max-width: $max-width;
-   margin: 0 auto 150px;
-   overflow-x: hidden;
+.home_container {
+   height: 100vh;
+   background: indianred;
+
+   .home_content {
+      max-width: $max-width;
+      background: lightblue;
+      height: 100%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      place-items: center;
+   }
 }
 
-.home_container {
-   padding: 8em 1em 0;
-   display: grid;
-   grid-template-columns: 1fr;
-   place-items: center;
-   
+.home_content {
    .bloc_img {
-      padding: 0 40px 40px;
+      width: 80%;
 
       img {
-         width: 150%;
+         width: 100%;
+         height: 100%;
       }
    }
 
-   .home_content {
+   .home_description {
       text-align: center;
 
       h1 {
@@ -46,40 +51,38 @@
    }
 }
 
-@media screen and (min-width: 700px) {
-   .home_container {
-      padding: 3em 1em;
+// @media screen and (min-width: 700px) {
+//    .home_container {
+//       padding: 3em 1em;
 
-      .bloc_img {
-         img {
-            width: 120%;
-            padding-left: 3em;
-         }
-      }
-   }
-}
+//       .bloc_img {
+//          img {
+//             width: 120%;
+//             padding-left: 3em;
+//          }
+//       }
+//    }
+// }
 
 
 @media screen and (min-width: 1024px) {
-   .global_container {
-      padding: 0 5em;
-      
+   .home_container {
       .home_container {
          display: grid;
          grid-template-columns: repeat(2, 1fr);
          place-items: center;
-         
+
          .bloc_img {
             order: 2;
-            
+
             img {
                width: 135%
             }
          }
-         
-         .home_content {
+
+         .home_description {
             text-align: initial;
-            
+
             p {
                padding: 1em 0;
                font-size: 22px;
