@@ -29,8 +29,7 @@ export default function Navbar() {
 
             <div className={styles.white_line}></div>
 
-            <div className={isActive ? cx(styles.btn_container, styles.active) 
-                                     : styles.sign}>
+            <div className={styles.btn_container}>
                <button className={styles.login_btn}>Login</button>
                <button className={styles.call_to_action}>Sign Up</button>
             </div>

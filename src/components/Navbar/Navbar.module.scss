@@ -96,3 +96,61 @@ nav {
       height: calc(50vh - 90px);
    }
 }
+
+@media screen and (min-width: 500px){
+   .nav_content {
+      height: calc(45vh - 90px);
+   }
+}
+
+
+@media screen and (min-width: 700px){
+   .navbar_container {
+
+      .hamburger {
+         display: none;
+      }
+
+      .nav_content {
+         position: initial;
+         width: 100%;
+         height: 100%;
+         background: transparent;
+         flex-direction: row;
+         @include align-flex(space-between);
+
+         .white_line {
+            display: none;
+         }
+
+         .links {
+            flex-direction: row;
+            padding-left: 2em;
+
+            a {
+               flex-direction: row;
+               color: $grayish-violet;
+               transition: .3s;
+
+               &:hover {
+                  color: $dark-violet;
+               }
+            }
+         }
+
+         .btn_container {
+            flex-direction: row;
+            gap: 0em;
+
+            .login_btn {
+               color: $grayish-violet;
+               transition: .3s;
+
+               &:hover {
+                  color: $dark-violet;
+               }
+            }
+         }
+      }
+   }
+}
