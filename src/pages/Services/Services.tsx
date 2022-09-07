@@ -17,12 +17,12 @@ export default function Services() {
     <div className={styles.services_container}> 
       <div className={styles.services_content}> 
 
-         <div className={styles.services_header}>
+         <form className={styles.services_header}>
             <input type="text" 
-                  name="shorten-link"     
-                  placeholder="Shorten a link here..." />
+                   name="shorten-link"     
+                   placeholder="Shorten a link here..." />
             <button>Shorten it!</button>
-         </div>
+         </form>
 
          <div className={styles.services_informations}>
             <h3>Advanced Statistics</h3>

@@ -2,6 +2,7 @@ import { CardType } from './../types/CardType';
 
 import BrandRecognition from "../images/icon-brand-recognition.svg";
 import DetailedRecords from "../images/icon-detailed-records.svg";
+import FullyCustomizable from "../images/icon-fully-customizable.svg";
 
 
 export const servicesData: CardType[] = [
@@ -18,6 +19,6 @@ export const servicesData: CardType[] = [
    {
       title: "Fully Customizable",
       description: "Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.",
-      icon: DetailedRecords
+      icon: FullyCustomizable
    }
 ]

@@ -11,7 +11,7 @@
    background-color: $white;
    margin: 2em 0 6em;
    padding: 3em 2em;
-   border-radius: 5px;
+   border-radius: 10px;
 
    
    &:not(:last-child):after {
@@ -41,5 +41,30 @@
    p {
       color: $grayish-violet;
       text-align: center;
+   }
+}
+
+@media screen and (min-width: 1400px) {
+   .card_container {
+
+      &:not(:last-child):after {
+         content: "";
+         right: -6%;
+         top: 50%;
+         transform: rotate(90deg);
+         height: 2em;
+      }
+
+      .card_header {
+         transform: translateX(-90%);
+      }
+   }
+
+   .card_container:nth-child(2) {
+      transform: translateY(15%);
+   }
+
+   .card_container:nth-child(3) {
+      transform: translateY(30%);
    }
 }

@@ -1,23 +1,23 @@
 @import "../../scss/_mixins.scss";
 @import "../../scss/variables.scss";
 
-
 .services_container {
   position: relative;
-  width: 100%;
-  height: auto;
+  height: 250vh;
   background-color: $light-gray;
 
   .services_content {
-   max-width: $max-width;
-   margin: 0 auto;
+    max-width: $max-width;
+    margin: 0 auto;
+    height: 100%;
   }
 }
 
 .services_header {
   position: absolute;
-  top: -4%;
-  left: 7%;
+  top: -4em;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   width: 85%;
@@ -52,6 +52,12 @@
   }
 }
 
+@media screen and (min-width: 390px) {
+  .services_container {
+    height: 200vh;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .services_header {
     flex-direction: row;
@@ -76,8 +82,6 @@
   }
 }
 
-
-
 .services_informations {
   display: flex;
   flex-direction: column;
@@ -101,8 +105,6 @@
 
 @media screen and (min-width: 1024px) {
   .services_informations {
-    padding: 12em 2em 2em;
-
     p {
       width: 40%;
       margin: 0 auto;
@@ -111,18 +113,29 @@
   }
 }
 
-
 .services_list {
   width: 90%;
-  margin: 5em auto 0;
-  flex-direction: column;
+  margin: 4em auto 0;
   @include align-flex(center);
+  flex-direction: column;
 }
 
+@media screen and (min-width: 1400px) {
+  .services_container {
+    height: 100vh;
 
-@media screen and (min-width: 1024) {
-   .services_list {
-      width: 90%;
-      flex-direction: row;
-   }
+    .services_content {
+      .services_list {
+        flex-direction: row;
+        gap: 2em;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .services_container {
+    height: 90vh;
+  }
 }
