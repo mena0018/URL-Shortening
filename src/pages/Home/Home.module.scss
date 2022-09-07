@@ -4,12 +4,10 @@
 
 .home_container {
    height: 100vh;
-   background: indianred;
 
    .home_content {
       max-width: $max-width;
-      background: lightblue;
-      height: 100%;
+      height: 95%;
       margin: 0 auto;
       display: grid;
       grid-template-columns: 1fr;
@@ -19,75 +17,47 @@
 
 .home_content {
    .bloc_img {
-      width: 80%;
+      overflow: hidden;
+      width: 100%;
+      padding: 0 1em;
 
       img {
-         width: 100%;
+         width: 150%;
          height: 100%;
       }
    }
 
    .home_description {
       text-align: center;
-
+      
       h1 {
          font-size: clamp(35px, 5vw, 75px);
          color: $dark-violet;
          line-height: 1.2;
+         padding: 0 0.5em;
       }
 
       p {
          color: $grayish-violet;
-         padding: 2em;
-         font-size: 18px;
+         padding: 1.5em;
+         font-size: 1.1em;
       }
 
       button {
          @include call_to_action;
          margin: 0;
-         padding: 13px 50px;
-         font-size: 20px;
+         padding: 0.8em 3.5em;
+         font-size: 1.2em;
+         letter-spacing: 1px;
       }
    }
 }
 
-// @media screen and (min-width: 700px) {
-//    .home_container {
-//       padding: 3em 1em;
-
-//       .bloc_img {
-//          img {
-//             width: 120%;
-//             padding-left: 3em;
-//          }
-//       }
-//    }
-// }
-
-
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 390px) {
    .home_container {
-      .home_container {
-         display: grid;
-         grid-template-columns: repeat(2, 1fr);
-         place-items: center;
-
-         .bloc_img {
-            order: 2;
-
-            img {
-               width: 135%
-            }
-         }
-
-         .home_description {
-            text-align: initial;
-
-            p {
-               padding: 1em 0;
-               font-size: 22px;
-            }
-         }
+      .home_content {
+         justify-items: center;
+         align-items: start;
       }
    }
 }
