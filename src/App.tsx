@@ -3,6 +3,7 @@ import "./index.scss";
 import Boost from "./pages/Boost/Boost";
 import Home from "./pages/Home/Home";
 import Services from './pages/Services/Services';
+import Footer from './pages/Footer/Footer';
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Home />
       <Services />
       <Boost />
+      <Footer />
     </>
   );
 }
