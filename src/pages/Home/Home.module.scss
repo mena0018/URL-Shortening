@@ -3,7 +3,7 @@
 
 
 .home_container {
-   height: 100vh;
+   height: 120vh;
 
    .home_content {
       max-width: $max-width;
@@ -55,9 +55,85 @@
 
 @media screen and (min-width: 390px) {
    .home_container {
+      height: 100vh;
+
       .home_content {
          justify-items: center;
          align-items: start;
       }
+   }
+}
+
+@media screen and (min-width: 700px) {
+   .home_container {
+      height: 60vh;
+
+      .home_content {
+         grid-template-columns: repeat(2, 1fr);
+
+         .bloc_img {
+            order: 1;
+         }
+
+         .home_description {
+            height: 100%;
+            text-align: start;
+            padding: 3em 1em 0;
+            display: flex;
+            flex-direction: column;
+            gap: 2em;
+
+            p, h1 {
+               padding: 0;
+            }
+            p {
+               max-width: 90%;
+            }
+            button {
+               max-width: 80%;
+            }
+         }
+
+      }
+   }
+}
+
+@media screen and (min-width: 1000px) {
+   .home_container {
+      height: 70vh;
+
+      .home_content {
+         .bloc_img {
+            img {
+               width: 120%;
+            }
+         }
+      }
+   }
+}
+
+
+@media screen and (min-width: 1400px) {
+   .home_container {
+      height: 85vh;
+
+      .home_content {
+         .home_description {
+            padding: 6em 1em 0;
+
+            p {
+               max-width: 80%;
+            }
+            button {
+               max-width: 50%;
+            }
+         }
+      }
+   }
+}
+
+@media screen and (min-width: 1600px) {
+   .home_container {
+      height: 75vh;
    }
 }
