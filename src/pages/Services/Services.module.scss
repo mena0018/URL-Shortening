@@ -1,10 +1,11 @@
 @import "../../scss/_mixins.scss";
 @import "../../scss/variables.scss";
 
+
 .services_container {
   position: relative;
-  height: 250vh;
-  background-color: $light-gray;
+  height: auto;
+  background-color: $light-blue;
 
   .services_content {
     max-width: $max-width;
@@ -52,11 +53,35 @@
   }
 }
 
-@media screen and (min-width: 390px) {
-  .services_container {
-    height: 200vh;
+
+.services_informations {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 10em 2em 2em;
+
+  h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: $dark-violet;
+    padding-bottom: 1em;
+  }
+
+  p {
+    font-size: 18px;
+    color: $grayish-violet;
+    letter-spacing: 0.3px;
+    max-width: calc($max-width - 25em);
   }
 }
+
+.services_list {
+  width: 90%;
+  margin: 2em auto 0;
+  @include align-flex(center);
+  flex-direction: column;
+}
+
 
 @media screen and (min-width: 1024px) {
   .services_header {
@@ -82,27 +107,6 @@
   }
 }
 
-.services_informations {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  padding: 10em 2em 2em;
-
-  h2 {
-    font-size: 30px;
-    font-weight: bold;
-    color: $dark-violet;
-    padding-bottom: 1em;
-  }
-
-  p {
-    font-size: 18px;
-    color: $grayish-violet;
-    letter-spacing: 0.3px;
-    max-width: calc($max-width - 25em);
-  }
-}
-
 @media screen and (min-width: 1024px) {
   .services_informations {
     p {
@@ -113,16 +117,9 @@
   }
 }
 
-.services_list {
-  width: 90%;
-  margin: 2em auto 0;
-  @include align-flex(center);
-  flex-direction: column;
-}
-
 @media screen and (min-width: 1400px) {
   .services_container {
-    height: 100vh;
+    height: 80vh;
 
     .services_content {
       .services_list {
@@ -131,11 +128,5 @@
         margin: 0 auto;
       }
     }
-  }
-}
-
-@media screen and (min-width: 1600px) {
-  .services_container {
-    height: 90vh;
   }
 }

@@ -3,7 +3,8 @@
 
 
 .home_container {
-   height: 120vh;
+   height: auto;
+   margin-bottom: 10em;
 
    .home_content {
       max-width: $max-width;
@@ -12,6 +13,7 @@
       display: grid;
       grid-template-columns: 1fr;
       place-items: center;
+      gap: 3em;
    }
 }
 
@@ -55,8 +57,6 @@
 
 @media screen and (min-width: 390px) {
    .home_container {
-      height: 100vh;
-
       .home_content {
          justify-items: center;
          align-items: start;
@@ -66,8 +66,6 @@
 
 @media screen and (min-width: 700px) {
    .home_container {
-      height: 60vh;
-
       .home_content {
          grid-template-columns: repeat(2, 1fr);
 
@@ -100,8 +98,6 @@
 
 @media screen and (min-width: 1000px) {
    .home_container {
-      height: 70vh;
-
       .home_content {
          .bloc_img {
             img {
@@ -115,8 +111,9 @@
 
 @media screen and (min-width: 1400px) {
    .home_container {
-      height: 85vh;
-
+      margin-bottom: 15em;
+      margin-top: 3em;
+      
       .home_content {
          .home_description {
             padding: 6em 1em 0;
@@ -129,11 +126,5 @@
             }
          }
       }
-   }
-}
-
-@media screen and (min-width: 1600px) {
-   .home_container {
-      height: 75vh;
    }
 }
