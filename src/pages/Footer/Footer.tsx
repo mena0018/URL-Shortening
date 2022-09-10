@@ -7,7 +7,7 @@ import Instagram from "../../images/icon-instagram.svg";
 
 const Footer = () => {
   return (
-    <footer>
+    <footer id="ressources">
 
       <h2>Shortly</h2>
       <div className={styles.footer_content}>

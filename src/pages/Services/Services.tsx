@@ -14,7 +14,7 @@ export default function Services() {
    )
 
   return (
-    <div className={styles.services_container}> 
+    <div className={styles.services_container} id="features"> 
       <div className={styles.services_content}> 
 
          <form className={styles.services_header}>
