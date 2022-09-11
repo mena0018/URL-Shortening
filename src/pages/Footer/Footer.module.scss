@@ -6,62 +6,76 @@ footer {
   background-color: $darker-violet;
   text-align: center;
 
-  h2 {
-    color: $white;
-    font-weight: 600;
-    font-size: 2em;
-    letter-spacing: 1px;
-    padding-bottom: 2em;
-  }
-
   .footer_content {
     height: 100%;
     max-width: $max-width;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     grid-gap: 3rem;
 
     .col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h2 {
+        color: $white;
+        font-weight: 600;
+        font-size: 2em;
+        letter-spacing: 1px;
+        padding-bottom: 2em;
+      }
+
       h3 {
         font-size: 1.2rem;
         font-weight: 600;
         padding-bottom: 1rem;
         display: inline-block;
         color: $white;
-
-        &::after {
-          content: "";
-          display: block;
-          width: 100%;
-          height: 3px;
-          background: $dark-violet;
-          border-radius: 5px;
-          margin: auto;
-        }
       }
 
       p {
         padding: 0.3rem 0;
-        color: $grayish-violet;
+        color: $light-violet;
+
+        &:hover {
+          color: $cyan;
+        }
       }
     }
+  }
 
-    .social_media {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 1.5em;
+  .social_media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+    width: 100%;
+    padding-top: 3em;
+
+    img {
+      &:hover {
+        filter: brightness(0) saturate(100%) invert(60%) sepia(66%) saturate(476%) hue-rotate(131deg) brightness(101%) contrast(88%);
+      }
     }
   }
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1200px) {
   footer {
+    display: grid;
+    grid-template-columns: 75% 10%;
+
     .footer_content {
-      .social_media {
+      .col {
         align-items: start;
       }
+    }
+
+    .social_media {
+      align-items: start;
+      padding-top: 0.5em;
     }
   }
 }
