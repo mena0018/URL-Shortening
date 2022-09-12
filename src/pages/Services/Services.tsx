@@ -1,11 +1,12 @@
 import CardService from "../../components/CardService/CardService";
 import styles from "./Services.module.scss";
 import { servicesData } from "../../data/services";
+import { CardType } from "../../types/CardType";
 
 
 export default function Services() {
 
-   const listServices = servicesData.map((item, index) => 
+   const listServices = servicesData.map((item: CardType, index: number) => 
       <CardService title={item.title}
                    description={item.description}
                    icon={item.icon}
