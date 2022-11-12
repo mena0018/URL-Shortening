@@ -10,9 +10,7 @@ nav {
     max-width: $max-width;
     height: 100%;
     margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include align-flex(space-between);
     padding: 0 1em;
 
     .logo_container {

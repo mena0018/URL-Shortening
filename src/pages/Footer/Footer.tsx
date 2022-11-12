@@ -37,10 +37,10 @@ const Footer = () => {
       </div>
 
       <div className={styles.social_media}>
-          <a href="https://facebook.com"  target='_blank'><img src={Facebook}   alt="Facebook's icon" /></a>
-          <a href="https://twitter.com"   target='_blank'><img src={Twitter}    alt="Twitter's icon" /></a>
-          <a href="https://pinterest.fr"  target='_blank'><img src={Pinterest}  alt="Pinterest's icon" /></a>
-          <a href="https://instagram.com" target='_blank'><img src={Instagram}  alt="Instagram's icon" /></a>
+          <a href="https://facebook.com"  target='_blank' rel="noreferrer"><img src={Facebook}   alt="Facebook's icon" /></a>
+          <a href="https://twitter.com"   target='_blank' rel="noreferrer"><img src={Twitter}    alt="Twitter's icon" /></a>
+          <a href="https://pinterest.fr"  target='_blank' rel="noreferrer"><img src={Pinterest}  alt="Pinterest's icon" /></a>
+          <a href="https://instagram.com" target='_blank' rel="noreferrer"><img src={Instagram}  alt="Instagram's icon" /></a>
       </div>
       
     </footer>

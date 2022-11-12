@@ -47,9 +47,7 @@ footer {
   }
 
   .social_media {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include align-flex(center);
     gap: 1.5em;
     width: 100%;
     padding-top: 3em;
