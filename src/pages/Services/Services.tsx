@@ -1,40 +1,41 @@
-import CardService from "../../components/CardService/CardService";
+import { FormEvent, useState } from "react";
+import { fetchUrl } from "../../api/shortener";
+import { ShortURL } from "../../types/ShortURL";
 import styles from "./Services.module.scss";
-import { servicesData } from "../../data/services";
-import { CardType } from "../../types/CardType";
-
+import Service from "../../components/Service/Service";
+import Links from "../../components/Links/Links";
 
 export default function Services() {
+  const [links, setLinks] = useState<ShortURL[]>([]);
 
-   const listServices = servicesData.map((item: CardType, index: number) => 
-      <CardService title={item.title}
-                   description={item.description}
-                   icon={item.icon}
-                   key={index}
-      />
-   )
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const form = e.currentTarget;
+    const values = Object.fromEntries(new FormData(form));
+
+    Promise.all([fetchUrl(values.link)]).then((values) =>
+      setLinks([...links, values[0].data])
+    );
+  };
 
   return (
-    <div className={styles.services_container} id="features"> 
-      <div className={styles.services_content}> 
+    <div className={styles.services_container} id="features">
+      <div className={styles.services_content}>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="url"
+            pattern="http://.*"
+            name="link"
+            placeholder="Shorten a link:  http://..."
+            required
+          />
+          <button>Shorten it!</button>
+        </form>
 
-         <form className={styles.services_header}>
-            <input type="text" 
-                   name="shorten-link"     
-                   placeholder="Shorten a link here..." />
-            <button>Shorten it!</button>
-         </form>
-
-         <div className={styles.services_informations}>
-            <h2>Advanced Statistics</h2>
-            <p>Track how your links are performing across the web with our advanced statistics dashboard</p>
-         </div>
-
-         <div className={styles.services_list}>
-            {listServices}
-         </div>
-         
+        <Links links={links} />
+        <Service />
       </div>
     </div>
-  )
+  );
 }
