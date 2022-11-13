@@ -14,7 +14,7 @@
   }
 }
 
-.services_header {
+form {
   position: absolute;
   top: -4em;
   left: 50%;
@@ -41,6 +41,16 @@
       font-size: 16px;
       padding-left: 0.5em;
     }
+
+    &:invalid {
+      border: 2px solid $light-red;
+      color: $light-red;
+    }
+
+    &:valid {
+      border: 2px solid green;
+      color: green;
+    }
   }
 
   button {
@@ -53,37 +63,9 @@
   }
 }
 
-.services_informations {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  padding: 10em 2em 2em;
-
-  h2 {
-    font-size: 30px;
-    font-weight: bold;
-    color: $dark-violet;
-    padding-bottom: 1em;
-  }
-
-  p {
-    font-size: 18px;
-    color: $grayish-violet;
-    letter-spacing: 0.3px;
-    max-width: calc($max-width - 25em);
-  }
-}
-
-.services_list {
-  width: 90%;
-  margin: 2em auto 0;
-  @include align-flex(center);
-  flex-direction: column;
-}
-
 
 @media screen and (min-width: 1024px) {
-  .services_header {
+  form {
     flex-direction: row;
     width: 80%;
     max-width: calc($max-width - 15em);
@@ -102,29 +84,6 @@
       width: 30%;
       padding: 0.7em 1em;
       font-size: 18px;
-    }
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .services_informations {
-    p {
-      width: 40%;
-      margin: 0 auto;
-      font-size: 22px;
-    }
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .services_container {
-    .services_content {
-      .services_list {
-        flex-direction: row;
-        gap: 2em;
-        margin: 0 auto;
-        padding-bottom: 6em;
-      }
     }
   }
 }
