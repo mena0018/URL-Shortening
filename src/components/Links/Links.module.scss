@@ -1,0 +1,20 @@
+@import "../../scss/_mixins.scss";
+@import "../../scss/variables.scss";
+
+.shorten_links_container {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.7em;
+  padding: 8em 0 1em;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .shorten_links_container {
+    width: 80%;
+    padding: 6em 0 0;
+  }
+}
