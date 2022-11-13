@@ -1,0 +1,49 @@
+@import "../../scss/_mixins.scss";
+@import "../../scss/variables.scss";
+
+.services_informations {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 2em 2em;
+
+  h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: $dark-violet;
+    padding-bottom: 1em;
+  }
+
+  p {
+    font-size: 18px;
+    color: $grayish-violet;
+    letter-spacing: 0.3px;
+    max-width: calc($max-width - 25em);
+  }
+}
+
+.services_list {
+  width: 90%;
+  margin: 2em auto 0;
+  @include align-flex(center);
+  flex-direction: column;
+}
+
+@media screen and (min-width: 1024px) {
+  .services_informations {
+    p {
+      width: 40%;
+      margin: 0 auto;
+      font-size: 22px;
+    }
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .services_list {
+    flex-direction: row;
+    gap: 2em;
+    margin: 0 auto;
+    padding-bottom: 6em;
+  }
+}
