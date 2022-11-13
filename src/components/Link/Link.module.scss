@@ -1,0 +1,60 @@
+@import "../../scss/_mixins.scss";
+@import "../../scss/variables.scss";
+
+.link {
+  width: 100%;
+  height: auto;
+  background-color: $white;
+  border-radius: 5px;
+  padding: 0.7em 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+  &:last-child {
+    margin-bottom: 3em;
+  }
+
+  .old_link {
+    &::after {
+      content: "";
+      display: block;
+      margin-top: 0.6em;
+      height: 1px;
+      background-color: $light-gray;
+    }
+  }
+
+  .new_link {
+    color: $cyan;
+  }
+
+  button {
+    @include call_to_action;
+    border-radius: 5px;
+    margin: 0;
+    font-size: 1.1em;
+
+    &.active {
+      background-color: $dark-violet;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .link {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .old_link {
+      &::after {
+        display: none;
+      }
+    }
+
+    .new_link {
+      margin-left: auto;
+    }
+  }
+}
