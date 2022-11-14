@@ -2,8 +2,8 @@ import { FormEvent, useState } from "react";
 import { fetchUrl } from "../../api/shortener";
 import { ShortURL } from "../../types/ShortURL";
 import styles from "./Services.module.scss";
-import Service from "../../components/Service/Service";
-import Links from "../../components/Links/Links";
+import Service from "../../components/Services/CardList/CardList";
+import Links from "../../components/Services/Links/Links";
 
 export default function Services() {
   const [links, setLinks] = useState<ShortURL[]>([]);
@@ -14,9 +14,7 @@ export default function Services() {
     const form = e.currentTarget;
     const values = Object.fromEntries(new FormData(form));
 
-    Promise.all([fetchUrl(values.link)]).then((values) =>
-      setLinks([...links, values[0].data])
-    );
+    fetchUrl(values.link).then((value) => setLinks([...links, value.data]));
   };
 
   return (
@@ -33,7 +31,7 @@ export default function Services() {
           <button>Shorten it!</button>
         </form>
 
-        <Links links={links} />
+        <Links urls={links} />
         <Service />
       </div>
     </div>
