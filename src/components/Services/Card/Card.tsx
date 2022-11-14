@@ -1,8 +1,8 @@
-import { CardType } from "../../types/CardType";
-import styles from "./CardService.module.scss";
+import { CardType } from "../../../types/CardType";
+import styles from "./Card.module.scss";
 
 
-export default function CardService({title, icon, description}: CardType) {
+export default function Card({title, icon, description}: Omit<CardType, "id">) {
 
   return (
     <div className={styles.card_container}>

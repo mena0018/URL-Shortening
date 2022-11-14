@@ -1,9 +1,9 @@
 import Navbar from "./components/Navbar/Navbar";
 import "./index.scss";
-import Boost from "./pages/Boost/Boost";
+import Boost from "./components/Boost/Boost";
 import Home from "./pages/Home/Home";
 import Services from './pages/Services/Services';
-import Footer from './pages/Footer/Footer';
+import Footer from './components/Footer/Footer';
 
 
 function App() {

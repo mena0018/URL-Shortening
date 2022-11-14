@@ -1,5 +1,5 @@
 import styles from "./Link.module.scss";
-import { LinkProps } from "../../types/LinkProps";
+import { LinkProps } from "../../../types/LinkProps";
 import { useState } from "react";
 
 const Link = ({ oldLink, newLink }: LinkProps) => {
