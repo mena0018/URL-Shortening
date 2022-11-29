@@ -4,6 +4,7 @@ import { ShortURL } from "../../types/ShortURL";
 import styles from "./Services.module.scss";
 import Service from "../../components/Services/CardList/CardList";
 import Links from "../../components/Services/Links/Links";
+import { motion } from "framer-motion";
 
 export default function Services() {
   const [links, setLinks] = useState<ShortURL[]>([]);
@@ -28,7 +29,12 @@ export default function Services() {
             placeholder="Shorten a link:  http://..."
             required
           />
-          <button>Shorten it!</button>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Shorten it!
+          </motion.button>
         </form>
 
         <Links urls={links} />
