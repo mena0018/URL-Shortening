@@ -1,135 +1,124 @@
 @import "../../scss/_mixins.scss";
 @import "../../scss/variables.scss";
 
-
 .home_container {
-   height: auto;
-   margin-bottom: 10em;
+  height: auto;
+  margin-bottom: 10em;
 
-   .home_content {
-      max-width: $max-width;
-      height: 95%;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr;
-      place-items: center;
-      gap: 3em;
-   }
+  .home_content {
+    max-width: $max-width;
+    height: 95%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    gap: 3em;
+  }
 }
 
 .home_content {
-   .bloc_img {
-      overflow: hidden;
-      width: 100%;
-      padding: 0 1em;
+  .bloc_img {
+    overflow: hidden;
+    width: 100%;
+    padding: 0 1em;
 
-      img {
-         width: 150%;
-         height: 100%;
-      }
-   }
+    img {
+      width: 150%;
+      height: 100%;
+    }
+  }
 
-   .home_description {
-      text-align: center;
-      
-      h1 {
-         font-size: clamp(35px, 5vw, 75px);
-         color: $dark-violet;
-         line-height: 1.2;
-         padding: 0 0.5em;
-      }
+  .home_description {
+    text-align: center;
 
-      p {
-         color: $grayish-violet;
-         padding: 1.5em;
-         font-size: 1.1em;
-      }
+    h1 {
+      font-size: clamp(35px, 5vw, 75px);
+      color: $dark-violet;
+      line-height: 1.2;
+      padding: 0 0.5em;
+    }
 
-      button {
-         @include call_to_action;
-         margin: 0;
-         padding: 0.8em 3.5em;
-         font-size: 1.2em;
-         letter-spacing: 1px;
+    p {
+      color: $grayish-violet;
+      padding: 1.5em;
+      font-size: 1.1em;
+    }
 
-         a {
-            text-decoration: none;
-            color: $white;
-         }
-      }
-   }
+    a {
+      @include call_to_action;
+      margin: 0;
+      padding: 0.8em 2em;
+      width: fit-content;
+      font-size: 1.2em;
+      letter-spacing: 1px;
+      text-decoration: none;
+      color: $white;
+    }
+  }
 }
 
 @media screen and (min-width: 390px) {
-   .home_container {
-      .home_content {
-         justify-items: center;
-         align-items: start;
-      }
-   }
+  .home_container {
+    .home_content {
+      justify-items: center;
+      align-items: start;
+    }
+  }
 }
 
 @media screen and (min-width: 700px) {
-   .home_container {
-      .home_content {
-         grid-template-columns: repeat(2, 1fr);
+  .home_container {
+    .home_content {
+      grid-template-columns: repeat(2, 1fr);
 
-         .bloc_img {
-            order: 1;
-         }
-
-         .home_description {
-            height: 100%;
-            text-align: start;
-            padding: 3em 1em 0;
-            display: flex;
-            flex-direction: column;
-            gap: 2em;
-
-            p, h1 {
-               padding: 0;
-            }
-            p {
-               max-width: 90%;
-            }
-            button {
-               max-width: 80%;
-            }
-         }
-
+      .bloc_img {
+        order: 1;
       }
-   }
+
+      .home_description {
+        height: 100%;
+        text-align: start;
+        padding: 3em 1em 0;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+
+        p,
+        h1 {
+          padding: 0;
+        }
+        p {
+          max-width: 90%;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 1000px) {
-   .home_container {
-      .home_content {
-         .bloc_img {
-            img {
-               width: 120%;
-            }
-         }
+  .home_container {
+    .home_content {
+      .bloc_img {
+        img {
+          width: 120%;
+        }
       }
-   }
+    }
+  }
 }
 
-
 @media screen and (min-width: 1400px) {
-   .home_container {
-      margin-bottom: 15em;
-      margin-top: 3em;
-      
-      .home_content {
-         .home_description {
-            padding: 6em 1em 0;
+  .home_container {
+    margin-bottom: 15em;
+    margin-top: 3em;
 
-            p {
-               max-width: 80%;
-            }
-            button {
-               max-width: 50%;
-            }
-         }
+    .home_content {
+      .bloc_img {
+        overflow: visible;
       }
-   }
+      .home_description {
+        padding: 6em 1em 0;
+      }
+    }
+  }
 }
