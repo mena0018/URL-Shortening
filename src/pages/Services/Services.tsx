@@ -31,9 +31,9 @@ export default function Services() {
           <input
             data-aos="flip-down"
             type="url"
-            pattern="http://.*"
+            pattern="https://.*"
             name="link"
-            placeholder="Shorten a link:  http://..."
+            placeholder="Shorten a link: https://..."
             required
           />
           <motion.button
